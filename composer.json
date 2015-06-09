@@ -1,0 +1,29 @@
+{
+  "name": "keysmash/PHP-EasyDB",
+  "type": "library",
+  "description": "Easy to use MySQL and PostgreSQL database library for PHP.",
+  "keywords": [
+    "database",
+    "PostgreSQL",
+    "MySQL",
+    "PHP"
+  ],
+  "homepage": "http://keysmashstudios.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sean Kelley",
+      "email": "sgtkode01@gmail.com",
+      "homepage": "http://keysmashstudios.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "files": ["src/Database.php", "src/DatabaseTable.php"]
+    }
+  }
+}
