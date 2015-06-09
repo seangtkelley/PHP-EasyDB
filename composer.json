@@ -1,5 +1,5 @@
 {
-  "name": "keysmash/PHP-EasyDB",
+  "name": "keysmash/php-easy-db",
   "type": "library",
   "description": "Easy to use MySQL and PostgreSQL database library for PHP.",
   "keywords": [
