@@ -1,7 +1,6 @@
 # PHP-EasyDB
 
 ##Easy to use MySQL and PostgreSQL database library for PHP.
----
 
 Disclaimer: This is a heavily modified version of the database classes used in the PHP Back the the Basics Lynda tutorial. I am not trying to steal the original IP.
 
@@ -30,6 +29,12 @@ class Test extends DatabaseTable {
   
   public $id;
   public $test;
+  
+  public static function find_by_test($database, $test){
+    $sql = "SELECT * FROM " . static::$table_name . " WHERE test=" . $test;
+    $result_array = static::find_by_sql($database, $sql);
+    return !empty($result_array) ? $result_array : false;
+  }
 }
 ```
 
@@ -38,7 +43,12 @@ class Test extends DatabaseTable {
 $row = Test::find_by_id($db, 1);
 ```
 
-#### Get row with specific sql
+#### Use custom function to find row(s)
+```php
+$rows = Test::find_by_test($db, "foobar");
+```
+
+#### Get row(s) with specific sql
 ```php
 $rows = Test::find_by_sql($db, "SELECT * FROM test LIMIT 3 ORDER BY ASC");
 ```
@@ -46,6 +56,13 @@ $rows = Test::find_by_sql($db, "SELECT * FROM test LIMIT 3 ORDER BY ASC");
 #### Get array of all rows
 ```php
 $rows = Test::find_all($db);
+```
+
+#### Loop through rows
+```php
+foreach($rows as $row){
+  // do stuff
+}
 ```
 
 #### Get data from row
