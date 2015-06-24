@@ -2,7 +2,7 @@
 
 ##Easy to use MySQL and PostgreSQL database library for PHP.
 
-Disclaimer: This is a heavily modified version of the database classes used in the PHP Back the the Basics Lynda tutorial. I am not trying to steal the original IP.
+Disclaimer: This is a heavily modified version of the database classes used in the PHP Beyond the the Basics Lynda tutorial. I am not trying to steal the original IP.
 
 #### Create a database object using params:
   type, host, database name, user, password
@@ -73,15 +73,6 @@ echo $row->test;
 #### Set row data
 ```php
 $row->test = "foobar";
-```
-
-#### Save row
-```php
-if($row->save()){
-  echo "yeah, it worked!";
-} else {
-  echo "dang it";
-}
 ```
 
 #### Save row
